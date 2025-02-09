@@ -1,0 +1,538 @@
+<!doctype html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap" rel="stylesheet">
+<link href="./styles/output.css" rel="stylesheet">
+<link rel="stylesheet" href="./styles/additional.css">
+</head>
+
+<body>
+    <!-- <div class="w-full h-screen bg-red-500"> -->
+    <!--NavBar-->
+
+    <div
+        class="md:hidden flex w-fit h-fit bg-[#F5F5F5] absolute top-10 right-12 z-50 p-2 px-8 rounded-l-xl rounded-br-xl menu-box hidden">
+        <ul class="flex flex-col items-center justify-center gap-4 text-navBar text-sm py-2">
+            <li class="border-b border-navBar">
+                <a href="">Home</a>
+            </li>
+            <li class="border-b border-navBar">
+                <a href="">Bookings</a>
+            </li>
+            <li class="border-b border-navBar"><a href="">AI Trip Planner</a></li>
+            <li class="border-b border-navBar"><a href="">Wishlist</a></li>
+        </ul>
+    </div>
+
+    <nav class="md:w-full md:h-[120px] w-full h-12 bg-navBar flex items-center justify-between px-10 relative">
+        <div class="md:w-[60px] w-[30px] md:h-[60px] h-[30px]">
+            <img src="./assets/logo.png" alt="logo">
+        </div>
+        <div class=" w-fit h-24 flex items-center">
+            <ul class="md:flex hidden items-center justify-center gap-4 text-white">
+                <li>
+                    <a href="">Home</a>
+                </li>
+                <li>
+                    <a href="">Bookings</a>
+                </li>
+                <li><a href="">AI Trip Planner</a></li>
+                <li><a href="">Wishlist</a></li>
+            </ul>
+        </div>
+
+        <div id="avatar" class="md:w-[60px] w-[30px] md:h-[60px] h-[30px] bg-[#B8DFF2] rounded-full">
+            <img src="./assets/avatarImage.png" alt="avatar">
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <div class="w-full h-[900px] bg-heroImage bg-cover bg-center bg-no-repeat relative sm:max-xl:text-center">
+
+        <img class="hidden md:flex sm:h-[900px] sm:w-full" src="./assets/background.jpg" alt="background">
+        <img class="flex md:hidden sm:h-[900px] sm:w-full h-[764px]" src="./assets/background_mobile.jpeg"
+            alt="background">
+        <h1 class="absolute top-24  text-white lg:text-[65px] sm:text-[30px]  text-center font-bold">Your Ultimate
+            Travel Companion for
+            Seamless Adventures</h1>
+        <div
+            class="lg:w-[90%] lg:h-[500px] sm:w-[80%] sm:h-[500px] w-[90%] bg-[#002855] absolute md:top-[150px] -top-4 left-[50%] translate-x-[-50%] translate-y-[50%] rounded-t-[30px] px-10 flex flex-col items-center justify-start gap-12">
+            <div
+                class="lg:w-fit lg:h-24 sm:w-full sm:h-24 w-full bg-white  rounded-xl md:-mt-12 -mt-4 flex items-center justify-between pr-4 md:gap-x-12 gap-x-8 overflow-hidden overflow-x-auto">
+                <div
+                    class="lg:w-24 lg:h-24 sm:w-24 sm:h-24 flex flex-col items-center justify-center sm:gap-0 gap-1 bg-[#023E7D] rounded-xl text-xs md:ml-0 ml-2 p-2 ">
+                    <i class="fa fa-plane text-white lg:text-xl -rotate-12"></i>
+                    <p class="text-white text-center text-wrap">Flight</p>
+                </div>
+                <div class="flex flex-col items-center justify-center text-xs">
+                    <i class="fas fa-snowboarding text-[#0353A4] lg:text-2xl sm:text-xs"></i>
+                    <p class="text-[#0353A4] text-center">
+                        <span>Holiday</span><br>
+                        <span>Package</span>
+                    </p>
+                </div>
+                <div class="flex flex-col items-center gap-2 text-xs">
+                    <i class="fas fa-train text-[#0353A4] lg:text-2xl sm:text-xs"></i>
+                    <p class="text-[#0353A4] text-center text-wrap">Trains</p>
+                </div>
+                <div class="flex flex-col items-center gap-1 sm:text-xs">
+                    <i class="fas fa-route text-[#0353A4] lg:text-2xl sm:text-xs"></i>
+                    <p class="text-[#0353A4] text-center text-xs">
+                        <span>AI Trip</span><br>
+                        <span>Planner</span>
+                    </p>
+                </div>
+                <div class="flex flex-col items-center gap-2 sm:text-xs">
+                    <i class="fas fa-bus text-[#0353A4] lg:text-2xl sm:text-xs"></i>
+                    <p class="text-[#0353A4] text-center text-wrap text-xs">Bus</p>
+                </div>
+                <div class="flex flex-col items-center gap-2 sm:text-xs">
+                    <i class="fas fa-car text-[#0353A4] lg:text-2xl sm:text-xs"></i>
+                    <p class="text-[#0353A4] text-center text-wrap text-xs">Cabs</p>
+                </div>
+                <div class="flex flex-col items-center gap-2 text-xs">
+                    <i class="fas fa-hotel text-[#0353A4] lg:text-2xl sm:text-xs"></i>
+                    <p class="text-[#0353A4] text-center text-wrap text-xs">Hotels</p>
+                </div>
+            </div>
+
+
+            <div class="lg:w-full lg:h-8 sm:w-full sm:h-[50%] flex items-center gap-8">
+                <div class="flex items-center justify-center gap-2">
+                    <input type="radio" name="trip-type" id="oneway" value="oneway">
+                    <label class="text-white text-xs md:text-base" for="oneway">One Way</label>
+                </div>
+                <div class="flex items-center justify-center gap-2">
+                    <input type="radio" name="trip-type" id="roundtrip" value="roundtrip">
+                    <label class="text-white text-xs md:text-base" for="roundtrip">Round Trip</label>
+                </div>
+                <div class="flex items-center justify-center gap-2">
+                    <input type="radio" name="trip-type" id="multicity" value="multicity">
+                    <label class="text-white text-xs md:text-base" for="multicity">Multi City</label>
+                </div>
+            </div>
+
+            <!--open api connection-->
+            <div id="tab-section">
+                <div id="heroSectionContainer" class="relative ">
+                    <template id="heroSectionTemplate">
+                        <div
+                            class="bg-transparent border h-50 text-white p-6 rounded-lg w-full max-w-4xl cursor-pointer transition-colors duration-300 overflow-hidden">
+                            <div class="grid md:grid-cols-5 grid-cols-2 gap-8  ">
+                                <details class="space-y-1 relative border-r">
+                                    <summary class="list-none cursor-pointer">
+                                        <p class="text-gray-400 text-sm">From</p>
+                                        <h2 class="text-xl font-semibold city-name"></h2>
+                                        <p class="text-xs text-gray-400 time-zone"></p>
+                                    </summary>
+                                    <div
+                                        class="from-container absolute top-full left-0 w-55 h-60 bg-blue-400 border border-blue-400 mt-2 p-4 rounded-lg shadow-xl z-20 overflow-y-auto ">
+                                        <input type="text" placeholder="Search cities..."
+                                            class="w-full p-3 mb-3 rounded-lg bg-[#002855] border whiteborder-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400 transition-all duration-300 sticky top-0" />
+                                        <div class="space-y-2 max-h-60 scrollbar-thin ">
+                                            <div class="city-buttons-container ">
+
+                                                <button
+                                                    class="w-full p-3 rounded-lg bg-[#002855] border border-gray-600 text-white hover:bg-[#0F3A5F] transition-colors duration-300 city-name"></button>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </details>
+                                <details class="space-y-1 relative border-r">
+                                    <summary class="list-none cursor-pointer">
+                                        <p class="text-gray-400 text-sm">To</p>
+                                        <h2 class="text-xl font-semibold arrival-name"></h2>
+                                        <p class="text-xs text-gray-400 arival-time-zone"></p>
+                                    </summary>
+                                    <div
+                                        class="to-container absolute top-full left-0 w-55 h-60 bg-blue-400 border border-white mt-2 p-4 rounded-lg shadow-xl z-20 overflow-y-auto scrollbar-thin">
+                                        <input type="text" placeholder="Search cities..."
+                                            class="w-full p-3 mb-3 rounded-lg bg-[#002855] border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300" />
+                                        <div class="space-y-2">
+                                            <button
+                                                class="w-full p-3 rounded-lg bg-[#002855] border border-gray-600 text-white hover:bg-[#0F3A5F] transition-colors duration-300 arrival-name"></button>
+                                        </div>
+                                    </div>
+                                </details>
+                                <details class="space-y-1 relative border-r">
+                                    <summary class="list-none cursor-pointer">
+                                        <p class="text-gray-400 text-sm">Departure</p>
+                                        <h2 class="text-xl font-semibold">19 Jul&#x27;24</h2>
+                                        <p class="text-xs text-gray-400">Friday</p>
+                                    </summary>
+                                    <div
+                                        class="departure-date absolute top-full left-0 w- bg-blue-400 border border-white mt-2 p-4 rounded-lg shadow-xl z-20">
+                                        <div class="space-y-2"> <input type="date"
+                                                class="w-full p-3 rounded-lg bg-[#002855] border border-gray-600 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300" />
+                                        </div>
+                                    </div>
+                                </details>
+                                <details class="space-y-1 relative border-r">
+                                    <summary class="list-none cursor-pointer">
+                                        <p class="text-gray-400 text-sm">Return</p>
+                                        <h2 class="text-xl font-semibold">26 Jul&#x27;24</h2>
+                                        <p class="text-xs text-gray-400">Thursday</p>
+                                    </summary>
+                                    <div
+                                        class="return-date absolute top-full left-0 w-55 bg-blue-400 border border-white mt-2 p-4 rounded-lg shadow-xl z-20">
+                                        <div class="space-y-2"> <input type="date"
+                                                class="w-full p-3 rounded-lg bg-[#002855] border border-gray-600 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300" />
+                                        </div>
+                                    </div>
+                                </details>
+                                <details class="space-y-1 relative">
+                                    <summary class="list-none cursor-pointer">
+                                        <p class="text-gray-400 text-sm">Traveller &amp; Class</p>
+                                        <h2 class="text-xl font-semibold">1 Traveller</h2>
+                                        <p class="text-xs text-gray-400">Economy/Premium Economy</p>
+                                    </summary>
+                                    <div
+                                        class=" traveller absolute top-full right-0 w-55 bg-blue-400 border border-white mt-2 p-4 rounded-lg shadow-xl z-20">
+                                        <select
+                                            class="w-full p-3 mb-3 rounded-lg bg-[#002855] border border-gray-600 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300">
+                                            <option>Economy</option>
+                                            <option>Premium Economy</option>
+                                            <option>Business</option>
+                                            <option>First Class</option>
+                                        </select>
+                                        <div
+                                            class="flex items-center justify-between p-3 rounded-lg bg-[#002855] border border-gray-600">
+                                            <span class="text-white">Passengers</span>
+                                            <div class="flex items-center space-x-4"> <button
+                                                    class="w-8 h-8 rounded-full bg-blue-500 text-white hover:bg-blue-600 transition-colors duration-300">-</button>
+                                                <span class="text-white">1</span> <button
+                                                    class="w-8 h-8 rounded-full bg-blue-500 text-white hover:bg-blue-600 transition-colors duration-300">+</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </details>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+
+            <div class="lg:w-full lg:h-32 sm:w-full sm:h-[50%] flex flex-col text-white ">
+                <p class="md:text-lg text-xs font-semibold">Select a Special Fare</p>
+                <!-- box -->
+                <div class="flex md:flex-row flex-col  w-3/4 items-center  mt-8 md:text-base text-xs">
+
+                    <div class="  w-full h-fit sm:w-full sm:h-fit border-r flex items-start justify-center gap-2">
+                        <div>
+                            <input type="radio" name="special-fare" id="regular">
+                        </div>
+                        <div class="flex flex-col">
+                            <label for="regular">Regular</label>
+                            <p>Regular fares</p>
+                        </div>
+                    </div>
+                    <div class="w-full h-fit border-r flex items-start justify-center gap-2">
+                        <div>
+                            <input type="radio" name="special-fare" id="doctor-nurse">
+                        </div>
+                        <div class="flex flex-col">
+                            <label for="doctor-nurse">Doctor and Nurses</label>
+                            <p>up to ₹600 off</p>
+                        </div>
+                    </div>
+                    <div class="w-full h-fit border-r flex items-start justify-center gap-2">
+                        <div>
+                            <input type="radio" name="special-fare" id="armed-forces">
+                        </div>
+                        <div class="flex flex-col">
+                            <label for="armed-forces">Armed Forces</label>
+                            <p>up to ₹600 off</p>
+                        </div>
+                    </div>
+                    <div class="w-full h-fit flex items-start justify-center gap-2 ml-8">
+                        <div>
+                            <input type="radio" name="special-fare" id="student">
+                        </div>
+                        <div class="flex flex-col">
+                            <label for="student">Student</label>
+                            <p>Extra discounts/baggage</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---->
+    <!--top picks for you-->
+    <div class="w-full lg:h-[728px] flex flex-col py-8 border-b-2 border-gray-300 overflow-hidden">
+        <div class="w-full h-15 px-8">
+            <p class="text-4xl font-bold  text-blue-500">Top Picks For You</p>
+        </div>
+        <div
+            class="w-full h-[600px] bg-transparent flex items-center px-8 justify-between gap-4 overflow-x-auto overflow-y-hidden scrollbar-none">
+            <!-- destination cards container   -->
+            <div id="destinationContainer" class="flex items-center gap-4 snap-x snap-mandatory">
+                <template id="destinationTemplate">
+                    <div class="min-w-[300px] h-fit flex flex-col rounded-xl snap-start">
+                        <div class="w-fit h-25">
+                            <img class="rounded-t-xl" src="" alt="destination">
+                        </div>
+                        <div class="w-full h-10 bg-white flex justify-between px-4 py-4">
+                            <p>
+                                <span class="text-lg font-semibold destination-name"></span>,
+                                <span class="text-xm destination-state"></span>
+                            </p>
+                            <div>
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-download"></i>
+                            </div>
+                        </div>
+                        <div class="w-full h-15 px-4 bg-white">
+                            <div class="w-full h-15 bg-white flex justify-between py-4 border-b-2 border-gray-300">
+                                <p class="destination-rating"></p>
+                                <div class="text-yellow-400 rating-stars"></div>
+                            </div>
+                        </div>
+                        <div class="w-full h-22 bg-white flex justify-between gap-5 py-4 px-4">
+                            <div
+                                class="w-[126px] h-10 bg-white flex items-center rounded-xl py-6 px-4 justify-between border border-gray-300">
+                                <i class="fa-solid fa-calendar-minus"></i>
+                                <p>
+                                    <span class="text-sm">Duration</span><br>
+                                    <span class="text-sm font-semibold destination-duration"></span>
+                                </p>
+                            </div>
+                            <div
+                                class="w-[158px] h-10 bg-white flex items-center rounded-xl py-6 px-4 justify-between gap-4 border border-gray-300">
+                                <i class="fa-solid fa-user"></i>
+                                <p>
+                                    <span class="text-xs">Per Day</span><br>
+                                    <span class="text-xs font-semibold">Pay per Person</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="w-full h-20 bg-white flex px-4">
+                            <div class="w-2/3 h-20">
+                                <p>
+                                    <span class="text-sm">From </span>
+                                    <span class="text-lg font-semibold destination-price"></span>
+                                    <span class="text-sm">/person</span><br>
+                                    <span class="text-sm destination-discount"></span>
+                                </p>
+                            </div>
+                            <div
+                                class="w-1/3 h-10 bg-white flex items-center justify-center rounded-full px-3 py-2 border-2 border-black cursor-pointer">
+                                <label class="text-sm font-bold">Book Now</label>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+    <!--ultimate Travel Spots-->
+    <div class="w-full h-[581px] bg-slate-100 flex flex-col px-8 py-4 border-b-2 border-gray-300  ">
+        <div class="w-full h-[81px] py-4 ">
+            <p class="text-4xl font-bold  text-blue-500">Ultimate Travel Spots</p>
+
+        </div>
+        <div id="travelSpotsContainer"
+            class="w-full h-[500px] flex justify-between gap-2 py-8 overflow-x-auyo overflow-y-hidden scrollbar-none">
+            <template id="travelSpotsTemplate">
+                <div class="w-fit h-[350px] px-2 text-white flex-shrink-0">
+
+                    <div class="w-fit h-[350px] relative   ">
+                        <img class="h-[400px] w-[200px] rounded-2xl" src="" alt="travelSpots">
+                        <p class="absolute text-lg -bottom-2 left-4 travelSpots-name"></p><br>
+                        <div class=" flex items-center absolute -bottom-8 left-4">
+                            <i class="fa-solid fa-star text-yellow-400"></i>
+                            <p class="travelSpots-rating"></p>
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </div>
+
+    </div>
+    <!--galary-->
+    <div class="w-full h-[861px] bg-slate-100 px-8 py-3">
+        <div class="w-full h-[90px] py-8">
+            <p class="text-4xl font-bold  text-blue-500">Galary</p>
+        </div>
+
+        <div class="  w-full h-[750px] py-8">
+            <div id="galaryContainer" class=" w-full h-[300px] flex ">
+                <template id="galaryTemplate">
+
+                    <div class="w-full h-[300px] relative ">
+                        <img class="h-[300px] w-full " src="" alt="galary">
+                    </div>
+                </template>
+
+            </div>
+            <div id="galary2Container" class="w-full h-[300px] flex ">
+                <template id="galary2Template">
+                    <div class="w-full h-[300px] ">
+                        <image class="h-[300px] w-full " src="" alt="galary2">
+                    </div>
+                </template>
+
+                <!-- <div class="w-full h-[375px] bg-[url('/assets/g6.jpg')] "></div>
+                    <div class="w-full h-[375px] bg-[url('/assets/g7.jpg')] "></div>
+                    <div class="w-full h-[375px] bg-[url('/assets/g8.jpg')] "></div>  -->
+
+            </div>
+
+        </div>
+    </div>
+    <!--journey beyond-->
+    <div class="w-[1350px] h-[560px] px-8 ">
+        <div
+            class=" w-full h-[560px]  py-8 px-8  bg-[url('../assets/bgnew.jpg')] bg-cover bg-center bg-no-repeat rounded-t-md  flex lg:flex-row flex-col ">
+
+            <!-- Left text section -->
+            <div class="w-1/2 flex items-center px-8 py-4">
+                <div class="text-white">
+                    <p class="md:text-4xl text-sm font-bold mb-4">Journey Beyond Boundaries</p>
+                    <h2 class="md:text-2xl text-xm">Discover the World's Wonders with Ease and Excitement</h2>
+                </div>
+            </div>
+
+            <!-- Right form section -->
+            <div class="w-1/2 flex justify-center items-center">
+                <div class="lg:w-[480px] w-[300px] lg:h-[500px] h-[320px] bg-white rounded-md shadow-lg ">
+                    <form id="contactForm" onsubmit="handleSubmit(event)">
+                        <div
+                            class="w-full lg:h-20 h-5 flex items-center justify-center text-blue-600 text-lg font-bold">
+                            <h1>Contact</h1>
+                        </div>
+                        <div class="w-full h-fit flex flex-col gap-4 p-4 ">
+                            <label for="name"></label>
+                            <input
+                                class="border w-full lg:h-10 h-5 px-4 rounded-md bg-gray-100 placeholder-gray-400 focus:outline-none focus:border-blue-500"
+                                type="text" placeholder="Name" id="name" name="entry.2032001086" required>
+                            <label for="email"></label>
+                            <input
+                                class="border-2 w-full lg:h-10 h-5 px-4 rounded-md bg-gray-100 placeholder-gray-400 focus:outline-none focus:border-blue-500"
+                                type="email" placeholder="Email Id" id="email" name="entry.202403497" required>
+                            <input
+                                class="border-2 w-full lg:h-10 h-5 px-4 rounded-md bg-gray-100 placeholder-gray-400 focus:outline-none focus:border-blue-500"
+                                type="text" placeholder="Subject" id="subject" name="entry.1696993396">
+                            <textarea
+                                class="border-2 w-full lg:h-20 h-10 px-4 py-3 rounded-md bg-gray-100 placeholder-gray-400 resize-none focus:outline-none focus:border-blue-500"
+                                placeholder="Message" id="message" name="entry.212117905"></textarea>
+
+                            <div class="flex items-center gap-2 text-gray-600">
+                                <input type="checkbox" id="newsletter" class="w-4 h-4 accent-blue-600">
+                                <label for="newsletter" class="text-sm">Subscribe to our newsletter</label>
+                            </div>
+                            <button
+                                class="w-full lg:h-10 h-5 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors duration-200 font-medium mt-2">
+                                Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--information-->
+    <div class="w-full h-[448px] bg-white border-b-2 border-gray-400 px-8  ">
+        <div class="w-full h-full flex justify-between gap-2 p-8 ">
+            <div class="w-full h-[400px]  flex rounded-b-lg  overflow-hidden overflow-x-auto">
+                <div class="w-2/6 h[400px] bg-white-700 px-2">
+                    <div class="w-1/2 h-full">
+                        <div class="w-full h-1/3 flex items-center gap-2">
+                            <div class="w-[60px] h-[60px]">
+                                <img src="./assets/logo.png" alt="logo">
+                            </div>
+                            <div>
+                                <p class="rubik-puddles-regular text-[#0466C8] text-3xl">JetSetGo</p>
+                            </div>
+                        </div>
+                        <div class="w-full h-1/3  border-b-2 border-gray-400">
+                            <div class="w-full h-1/2">
+                                <p>India: 1800 890 1234Worldwide: +91 987 654 3210Email: support@jetsetgo.in</p>
+                            </div>
+                        </div>
+                        <div class="w-full h-1/3  ">
+                            <br><br>
+                            <h1 class="text-blue-500">Social</h1>
+                            <i class="fa-brands fa-linkedin"></i>
+                            <i class="fa-brands fa-square-instagram"></i>
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-youtube"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-4/6 h-ful flex justify-between gap-8">
+                    <div class="w-full h-full ">
+                        <h1 class="text-blue-500">JetSet Go</h1>
+                        <p>About Us</p>
+                        <p>Investor Relations</p>
+                        <p>Careers</p>
+                    </div>
+                    <div class="w-full h-full ">
+                        <h1 class="text-blue-500">Product Offering</h1>
+                        <p>Flights</p>
+                        <p>Book Hotels</p>
+                        <p>Book Online Cabs</p>
+                        <p>Trip Planers</p>
+                        <p>Holiday Packages</p>
+                        <p>Bus Service</p>
+                        <p>Book Online Trains</p>
+                        <p>Adventure Sports</p>
+                        <p>Trip Ideas</p>
+                    </div>
+                    <div class="w-full h-full">
+                        <h1 class="text-blue-500">Importent Links</h1>
+                        <p>Cheap Flights</p>
+                        <p>Flight Status</p>
+                        <p>Flight Offers</p>
+                        <p>Train Status</p>
+                    </div>
+                    <div class="w-full h-full ">
+                        <h1 class="text-blue-500">Quick Links</h1>
+                        <p>Flights To Delhi</p>
+                        <p>Flights To Chennai</p>
+                        <p>Trains From Howrah</p>
+                        <p>Book Cabs</p>
+                        <p>Hotels in OOty</p>
+                        <p>Indian Railways</p>
+                        <p>Dometic Flights</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end-->
+    <div class="w-full h-[40px] bg-white py-2 px-8">
+        <div class="w-full h-[39px] flex  text-gray-400 ">
+            <div class="w-1/2 h-full  justify-center items-center ">
+                <i class="fa-thin fa-circle-c"></i>
+                <p>2024 JetSet Go Inc. All Rights Reserved</p>
+            </div>
+            <div class="w-1/2 h-full flex justify-between gap-3">
+                <div class="w-1/4 h-full">
+                    <p>Why JetSet Go?</p>
+                </div>
+                <div class="w-1/4 h-full">
+                    <p>Privacy Policy</p>
+                </div>
+                <div class="w-1/4 h-full">
+                    <p>Terms For Use</p>
+                </div>
+                <div class="w-1/4 h-full">
+                    <p>Cookie Policy</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- </div> -->
+
+    <!-- Add this script section before the closing body tag -->
+
+    <script src="./scripts/index.js"></script>
+</body>
+
+</html>
